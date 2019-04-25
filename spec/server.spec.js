@@ -7,7 +7,6 @@ describe('Shop API Integration Tests', function() {
         it('should get all shops', function(done) { 
         request(app) .get('/api/shops')
             .end(function(err, res) { 
-                console.log(res)
             expect(res.statusCode).to.equal(200); 
             expect(res.body).to.be.an('object');
             done(); 
