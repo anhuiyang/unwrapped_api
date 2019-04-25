@@ -13,13 +13,13 @@ app.get('/', (req, res)=>{
     res.send('please use /api/shops')
 })
 app.get('/api/shops', (req, res)=>{
-    Shop.getShops((err, books)=>{
-        err ? res.json(err) : res.json(books)
+    Shop.getShops((err, shops)=>{
+        err ? res.json(err) : res.json(shops)
     })
 })
 app.get('/api/shops/:_id', (req, res)=>{
-    Shop.getShopByID(req.params._id, (err, books)=>{
-        err ? res.json(err) : res.json(books)
+    Shop.getShopById(req.params._id, (err, shops)=>{
+        err ? res.json(err) : res.json(shops)
     })
 })
 app.post('/api/shops', (req, res)=>{
