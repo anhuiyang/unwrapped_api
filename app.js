@@ -14,31 +14,31 @@ app.get('/', (req, res)=>{
 })
 app.get('/api/shops', (req, res)=>{
     Shop.getShops((err, shops)=>{
-        err ? res.json(err) : res.json(shops)
+        err ? res.send(err.message) : res.json(shops)
     })
 })
 app.get('/api/shops/:_id', (req, res)=>{
     Shop.getShopById(req.params._id, (err, shops)=>{
-        err ? res.json(err) : res.json(shops)
+        err ? res.send(err.message) : res.json(shops)
     })
 })
 app.post('/api/shops', (req, res)=>{
     let shop = req.body
     Shop.addShop(shop, (err, shop)=>{
-        err ? res.json(err) : res.json(shop)
+        err ? res.send(err.message) : res.json(shops)
     })
 })
 app.put('/api/shops/:_id', (req, res)=>{
     let id = req.params._id
     let shop = req.body
     Shop.updateShop(id, shop, (err, shop)=>{
-        err ? res.json(err) : res.json(shop)
+        err ? res.send(err.message) : res.json(shops)
     })
 })
 app.delete('/api/shops/:_id', (req, res)=>{
     let id = req.params._id
     Shop.deleteShop(id, (err, shop)=>{
-        err ? res.json(err) : res.json(shop)
+        err ? res.send(err.message) : res.json(shops)
     })
 })
 app.listen(3000)
