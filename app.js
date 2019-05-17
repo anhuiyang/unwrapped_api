@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/unwrappedShop')
 const db = mongoose.connection
 
-const Shop = require('./models/shop') 
+const Shop = require('./models/shop')
 
 
 app.get('/', (req, res)=>{
