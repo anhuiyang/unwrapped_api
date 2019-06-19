@@ -17,3 +17,7 @@ Run npm to install dependencies `npm install`
 
 ### Usage
 
+start the server `nodemon`
+
+Open your browser and navigate to `localhost:1234/api/shops`
+
