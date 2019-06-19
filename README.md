@@ -21,3 +21,4 @@ start the server `nodemon`
 
 Open your browser and navigate to `localhost:1234/api/shops`
 
+feel free to download [postman](https://www.getpostman.com/) to make API calls
